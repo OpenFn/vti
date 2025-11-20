@@ -1099,7 +1099,7 @@ Use OpenFn's built-in S3 polling:
 
 ## Migration Strategy
 
-### Phase 1: Parallel Operation (2 weeks)
+### Phase 1: Parallel Operation
 
 1. Deploy OpenFn workflow alongside existing Lambda functions
 2. Configure to process copies of files (duplicate to separate S3 bucket)
@@ -1109,14 +1109,14 @@ Use OpenFn's built-in S3 polling:
    - Email notifications
 4. Tune performance and error handling
 
-### Phase 2: Gradual Cutover (2 weeks)
+### Phase 2: Gradual Cutover
 
 1. Route 10% of traffic to OpenFn (use S3 bucket prefix routing)
 2. Monitor for errors and performance
 3. Increase to 50%, then 100%
 4. Keep Lambda functions on standby
 
-### Phase 3: Decommission (1 week)
+### Phase 3: Decommission
 
 1. Remove Lambda functions
 2. Clean up CloudFormation stacks
